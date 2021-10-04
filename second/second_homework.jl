@@ -1,4 +1,3 @@
-include("first_homework.jl")
 include("differ.jl")
 function bubble_sort(a)
     n = size(a, 1)
