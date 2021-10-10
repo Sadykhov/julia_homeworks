@@ -30,4 +30,30 @@ function task_count_word(p::Predozenie)
     println(k)
 end
 
-task_count_word(predl)
+function init_word(a, k)
+    try
+        return Slovo(a,k)
+    catch
+        error("error Init word")
+    end
+end
+
+function init_pred(a, k)
+    try
+        return Predozenie(a,k)
+    catch
+        error("init predl errror")
+    end
+end
+
+function test_task_last()
+    a = init_word("kobra",5)
+    b = init_word("Thanos",5)
+    c = [a,b]
+    d = init_pred(c, length(c))
+    try
+        task_count_word(d)
+    catch
+        error("pred task error")
+    end
+end
