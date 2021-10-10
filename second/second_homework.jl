@@ -17,8 +17,6 @@ function bubble_sort(a)
     end
 end
 
-a = [6,4,3,5,6,2,3]
-k = Matrix{Float64}(undef, 8, 15)
 
 function  max_min(matrix)
     for i = 1:4
@@ -80,6 +78,36 @@ function sets(stroka)
     end
     println(result)
 end
+
+function sort_test()
+    a = [6,4,3,5,6,2,3]
+    try
+        bubble_sort(a)
+        println(a)
+    catch err
+        error("sort error")
+    end
+end
+
+function test_matrix_task()
+    k = Matrix{Float64}(undef, 8, 15)
+    try
+        max_min(x)
+    catch
+        error("matrix work error")
+    end
+end
+
+function test_set_task()
+    try
+        row = "horosho ploho abiba boba"
+        sets(row)
+    catch
+        error("read row or sets FUNCTION ERROR")
+    end
+end
+
+test_set_task()
 
 differ.differ_sin(0.49,0.5,0.51)
 differ.diifer_tan(0.49,0.5,0.51)
